@@ -1,0 +1,20 @@
+{
+    "name": "system/employee-manage",
+    "description": "Admin Panel User Roles Management",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tharindu lakshan",
+            "email": "tharindu@inkspace.lk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "System\\Employee\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support" : "~5"
+    }
+}

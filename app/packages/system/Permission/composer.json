@@ -1,0 +1,20 @@
+{
+    "name": "system/permissions",
+    "description": "Admin Panel User Roles Management",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tharindu lakshan",
+            "email": "tharindu@inkspace.lk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "System\\Permissions\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support" : "~5"
+    }
+}

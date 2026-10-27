@@ -1,0 +1,81 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "barryvdh/laravel-dompdf": "^0.8.4",
+        "chumper/zipper": "1.0.x",
+        "fideloper/proxy": "~3.3",
+        "intervention/image": "^2.4",
+        "kalnoy/nestedset": "^4.3",
+        "laravel/framework": "5.5.*",
+        "laravel/passport": "~4.0",
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.5.0",
+        "lcobucci/jwt": "3.3.3",
+        "maatwebsite/excel": "~2.1.0",
+        "phpseclib/phpseclib": "^2.0",
+        "predis/predis": "^1.1",
+        "pusher/pusher-php-server": "~3.0",
+        "simplesoftwareio/simple-qrcode": "^4.2",
+        "webpatser/laravel-uuid": "^3.0",
+        "zizaco/entrust": "1.7.0",
+        "elibyy/tcpdf-laravel": "5.5.*"
+    },
+    "require-dev": {
+        "filp/whoops": "~2.0",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "symfony/thanks": "^1.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "System\\": "app/packages/system/",
+            "System\\UserRoles\\": "app/packages/system/user-roles/src",
+            "System\\Permissions\\": "app/packages/system/Permission/src",
+            "System\\Employee\\": "app/packages/system/employee-manage/src",
+            "System\\Department\\": "app/packages/system/department-manage/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true,
+            "symfony/thanks": true
+        }
+    }
+}

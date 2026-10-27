@@ -1,0 +1,31 @@
+<?php
+
+
+//ISSUE STATUS
+define('INQUIRY_PENDING',0);
+define('INQUIRY_APPROVED',1);
+define('INQUIRY_REJECTED',2);
+define('INQUIRY_JOB_CREATED',3);
+
+//REGISTRATION REQUEST STATUS
+define('REG_REQ_PENDING',0);
+define('REG_REQ_APPROVED',1);
+define('REG_REQ_REJECTED',2);
+define('REG_REQ_EMPLOYEE_CREATED',3);
+
+define('PAYMENT_PENDING',0);
+define('PAYMENT_SUCCESS',1);
+define('PAYMENT_EXPIRED',-2);
+define('PAYMENT_FAILED',-1);
+
+define('TRANSACTION_PENDING',0);
+define('TRANSACTION_SUCCESS',1);
+define('TRANSACTION_EXPIRED',-2);
+define('TRANSACTION_FAILED',-1);
+
+define('CURRENCY','USD');
+
+define('BCC_SRIYA',true);
+define('EMAIL_TEST',false);
+
+
